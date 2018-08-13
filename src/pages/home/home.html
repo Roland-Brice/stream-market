@@ -1,17 +1,57 @@
 <ion-header>
+
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+    <ion-icon name=ios-radio-outline></ion-icon>
+      Home
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-title>New Releases</ion-title>
+  <div class="mock-div">
+      <ion-slides loop="True" autoplay="True" speed=100>
+          <ion-slide>
+            <h1>Album1</h1>
+          </ion-slide>
+    
+          <ion-slide>
+            <h1>Album2</h1>
+          </ion-slide>
+    
+          <ion-slide>
+            <h1>Album3</h1>
+          </ion-slide>
+      </ion-slides> 
+  </div>
+
+  <ion-title>Top Artists</ion-title>
+  <div class="mock-div">
+      <ion-slides loop="True" autoplay="True" speed=100>
+          <ion-slide>
+            <h1>Artiste1</h1>
+          </ion-slide>
+    
+          <ion-slide>
+            <h1>Artiste2</h1>
+          </ion-slide>
+    
+          <ion-slide>
+            <h1>Artiste3</h1>
+          </ion-slide>
+      </ion-slides> 
+  </div>
+
+  <ion-title>Most Popular</ion-title>
+  <ion-list>
+    <ion-item>Top1</ion-item>
+    <ion-item>Top2</ion-item>
+    <ion-item>Top3</ion-item>
+    <ion-item>Top4</ion-item>
+    <ion-item>Top5</ion-item>
+  </ion-list>
 </ion-content>
+<player></player>

@@ -1,11 +1,36 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      <ion-icon name="md-microphone"></ion-icon> MUSIC
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-list-header>Album Suggestions</ion-list-header>
+  <div class="mock-div">
+    <ion-slides loop="True" autoplay="True" speed=100>
+        <ion-slide>
+          <h1>Album1</h1>
+        </ion-slide>
+  
+        <ion-slide>
+          <h1>Album2</h1>
+        </ion-slide>
+  
+        <ion-slide>
+          <h1>Album3</h1>
+        </ion-slide>
+    </ion-slides> 
+  </div>
+  <ion-list-header>My Music Space</ion-list-header>
+  <ion-list>
+    <button ion-item (click)="openMostPlayedPage()"><ion-icon name="ios-cart" item-start></ion-icon> Caddy </button>
+    <button ion-item (click)="openMostPlayedPage()"><ion-icon name="md-archive" item-start></ion-icon> Downloads </button>
+    <button ion-item (click)="openMyPlaylistsPage()"><ion-icon name="ios-list" item-start></ion-icon> My Playlists </button>
+    <button ion-item (click)="openMostPlayedPage()"><ion-icon name="ios-people-outline" item-start></ion-icon> My Artists </button>
+    <button ion-item (click)="openMostPlayedPage()"><ion-icon name="md-podium" item-start></ion-icon> Top Album </button>
+    <button ion-item (click)="openMostPlayedPage()"><ion-icon name="ios-star" item-start></ion-icon> Most Played </button>
 
+  </ion-list>
 </ion-content>

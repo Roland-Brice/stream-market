@@ -1,17 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      <ion-icon name="options"></ion-icon>
+      Settings
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <a ion-item detail-push href="#"><ion-icon name="md-person" item-start></ion-icon>Account</a>
+    <a ion-item detail-none href="#"><ion-icon name="musical-note" item-start></ion-icon>Music Settings</a>
+    <a ion-item detail-push href="#"><ion-icon name="ios-card" item-start></ion-icon>Subscription</a>
+    <a ion-item detail-none href="#"><ion-icon name="md-arrow-round-back" item-start></ion-icon>Log Out</a>
+    <a ion-item detail-none href="#"><ion-icon name="ios-trash" item-start></ion-icon>Delete Account</a>
+    <a ion-item detail-push href="#"><ion-icon name="ios-mail" item-start></ion-icon>Contact Us</a>
+
   </ion-list>
 </ion-content>
