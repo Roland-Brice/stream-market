@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ArtistDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>artist-detail-page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <!-- <div class="item-profile" text-center> -->
+        <ion-avatar>
+            <img [src]="'https://api.adorable.io/avatars/75/'">
+        </ion-avatar>
+    <!-- </div> -->
+    
+      <div ion-item class="item-detail" padding>
+        <h2>Artist name</h2>
+        <p>Artist label</p>
+        <ion-icon item-end name=ios-bonfire-outline></ion-icon>
+      </div>
+      
+      <ion-list-header>Discography</ion-list-header>
+      <ion-list>
+        <ion-thumbnail ion-item>
+          <img [src]="'https://api.adorable.io/avatars/76/'">
+          <h2>Album Title</h2>
+        </ion-thumbnail>
+        <ion-thumbnail ion-item>
+            <img [src]="'https://api.adorable.io/avatars/755/'">
+            <h2>Album Title</h2>
+        </ion-thumbnail>
+        <ion-thumbnail ion-item>
+            <img [src]="'https://api.adorable.io/avatars/705/'">
+            <h2>Album Title</h2>
+        </ion-thumbnail>
+        <ion-thumbnail ion-item>
+            <img [src]="'https://api.adorable.io/avatars/175/'">
+            <h2>Album Title</h2>
+        </ion-thumbnail>
+      </ion-list>
+</ion-content>

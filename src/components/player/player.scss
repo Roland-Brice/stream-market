@@ -42,10 +42,10 @@ player {
         bottom: 0;
     }
 
-    ion-footer {
-        height: 75px;
+    .player_design {
+        //height: 75px;
         background-color: map-get($colors, dark);
-        margin-bottom: 15%;
+        //margin-bottom: 15%;
         ion-grid, ion-row, ion-col {
             height: 100%;
         }

@@ -1,0 +1,34 @@
+page-create-playlist {
+    .profile-image-wrapper {
+        text-align: center;
+        margin: 20px 0;
+    
+        .profile-image {
+          width: 96px;
+          height: 96px;
+    
+          display: inline-block;
+    
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+    
+        .profile-image-placeholder {
+          display: inline-block;
+    
+          background-color: #eee;
+          width: 150px;
+          height: 150px;
+    
+          font-size: 12px;
+    
+          ion-icon {
+            font-size: 44px;
+            padding-top: 35%;
+            // margin-bottom: 10px;
+            // margin-top: 10px;
+          }
+        }
+      }
+}

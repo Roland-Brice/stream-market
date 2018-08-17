@@ -91,6 +91,7 @@ openMore(track){
     let popover = this.popoverCtrl.create(MorePageComponent);
     popover.present();
 }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad MostPlayedPage');
   }

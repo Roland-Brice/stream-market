@@ -1,5 +1,6 @@
+import { CreatePlaylistPage } from './../create-playlist/create-playlist';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the MyPlaylistsPage page.
@@ -15,7 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MyPlaylistsPage {
   playlists: any
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
     this.playlists = [
       {title: 'Something About You'},
       {title: 'Run'},
@@ -30,6 +32,20 @@ export class MyPlaylistsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyPlaylistsPage');
+  }
+
+  // openCreatePlaylistPage(){
+  //   this.navCtrl.push(CreatePlaylistPage);
+  // }
+
+  addPlaylist() {
+    let addModal = this.modalCtrl.create('CreatePlaylistPage');
+    addModal.onDidDismiss(playlist => {
+      if (playlist) {
+        this.playlists.add(playlist);
+      }
+    })
+    addModal.present();
   }
 
 }

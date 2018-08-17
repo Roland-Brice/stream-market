@@ -1,3 +1,6 @@
+import { CaddyPage } from './../pages/caddy/caddy';
+import { ArtistDetailPage } from './../pages/artist-detail/artist-detail';
+import { MyArtistsPage } from './../pages/my-artists/my-artists';
 import { MyPlaylistsPage } from './../pages/my-playlists/my-playlists';
 import { MorePageComponent } from './../components/more-page/more-page';
 import { PlayerComponent } from './../components/player/player';
@@ -17,6 +20,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProviderTestProvider } from '../providers/provider-test/provider-test';
+import { CreatePlaylistPage } from '../pages/create-playlist/create-playlist';
 @NgModule({
   declarations: [
     MyApp,
@@ -30,6 +34,9 @@ import { ProviderTestProvider } from '../providers/provider-test/provider-test';
     PlayerComponent,
     MorePageComponent,
     MyPlaylistsPage,
+    MyArtistsPage,
+    ArtistDetailPage,
+    CaddyPage,
 
   ],
   imports: [
@@ -48,6 +55,9 @@ import { ProviderTestProvider } from '../providers/provider-test/provider-test';
     PlayerComponent,
     MorePageComponent,
     MyPlaylistsPage,
+    MyArtistsPage,
+    ArtistDetailPage,
+    CaddyPage,
   ],
   providers: [
     StatusBar,

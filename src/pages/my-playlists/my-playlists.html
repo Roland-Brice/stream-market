@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <ion-list-header>My Custom Playlists</ion-list-header>
-  <ion-item>Create a new playlist <ion-icon name=md-add item-end></ion-icon></ion-item>
+  <button detail-none ion-item (click)="addPlaylist()">Create a new playlist <ion-icon name=md-add item-end></ion-icon></button>
   <ion-list>
       <button detail-none ion-item *ngFor="let playlist of playlists">
             

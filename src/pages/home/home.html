@@ -15,15 +15,21 @@
   <div class="mock-div">
       <ion-slides loop="True" autoplay="True" speed=100>
           <ion-slide>
-            <h1>Album1</h1>
-          </ion-slide>
+              <ion-avatar item-left>
+                  <img [src]="'https://api.adorable.io/avatars/11/'">
+              </ion-avatar>          
+            </ion-slide>
     
           <ion-slide>
-            <h1>Album2</h1>
-          </ion-slide>
+              <ion-avatar item-left>
+                  <img [src]="'https://api.adorable.io/avatars/21/'">
+              </ion-avatar>          
+            </ion-slide>
     
           <ion-slide>
-            <h1>Album3</h1>
+              <ion-avatar item-left>
+                  <img [src]="'https://api.adorable.io/avatars/31/'">
+              </ion-avatar>
           </ion-slide>
       </ion-slides> 
   </div>
@@ -32,15 +38,21 @@
   <div class="mock-div">
       <ion-slides loop="True" autoplay="True" speed=100>
           <ion-slide>
-            <h1>Artiste1</h1>
+              <ion-avatar item-left>
+                  <img [src]="'https://api.adorable.io/avatars/1/'">
+              </ion-avatar>
           </ion-slide>
     
           <ion-slide>
-            <h1>Artiste2</h1>
+              <ion-avatar item-left>
+                  <img [src]="'https://api.adorable.io/avatars/5/'">
+              </ion-avatar>
           </ion-slide>
     
           <ion-slide>
-            <h1>Artiste3</h1>
+              <ion-avatar item-left>
+                  <img [src]="'https://api.adorable.io/avatars/375/'">
+              </ion-avatar>
           </ion-slide>
       </ion-slides> 
   </div>
@@ -53,5 +65,7 @@
     <ion-item>Top4</ion-item>
     <ion-item>Top5</ion-item>
   </ion-list>
+  
 </ion-content>
-<player></player>
+<ion-footer><player></player>
+</ion-footer>

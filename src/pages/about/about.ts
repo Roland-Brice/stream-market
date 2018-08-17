@@ -1,3 +1,5 @@
+import { CaddyPage } from './../caddy/caddy';
+import { MyArtistsPage } from './../my-artists/my-artists';
 import { MyPlaylistsPage } from './../my-playlists/my-playlists';
 import { MostPlayedPage } from './../most-played/most-played';
 import { Component } from '@angular/core';
@@ -18,6 +20,12 @@ export class AboutPage {
   }
 
   openMyPlaylistsPage(){
-    this.navCtrl.push(MyPlaylistsPage)
+    this.navCtrl.push(MyPlaylistsPage);
+  }
+  openMyArtistsPage(){
+    this.navCtrl.push(MyArtistsPage);
+  }
+  openCaddyPage(){
+    this.navCtrl.push(CaddyPage);
   }
 }

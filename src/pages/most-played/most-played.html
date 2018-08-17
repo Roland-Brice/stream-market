@@ -23,8 +23,8 @@
                 <img [src]="'https://api.adorable.io/avatars/75/' + track.artist">
                 <ion-spinner item-right *ngIf="track.playing" name="bubbles" item-left></ion-spinner>
             </ion-thumbnail>
-            <h2>{{track.artist}}</h2>
-            <p>{{track.title}}</p>
+            <h2>{{track.title}}</h2>
+            <p>{{track.artist}}</p>
 
             <ion-icon item-end name=md-more (click)="openMore()"></ion-icon>
             
@@ -35,33 +35,5 @@
 </ion-content>
 
 <ion-footer>
-        <progress-bar [progress]="currentTrack.progress"></progress-bar>
-
-    <ion-grid>
- 
-        <ion-row>
-            <ion-col item-width="33">
-                <div>
-                    {{currentTrack.artist}}
-                    {{currentTrack.title}}
-                </div>
-                
-            </ion-col>
-            <ion-col width="33">
-                <button (click)="prevTrack()" color="light" clear ion-button icon-only><ion-icon name="ios-skip-backward"></ion-icon></button>
-            </ion-col>
- 
-            <ion-col width="33">
-                <button *ngIf="!currentTrack.playing" (click)="playTrack(currentTrack)" color="light" clear ion-button icon-only><ion-icon name="ios-play-outline"></ion-icon></button>
-                <button *ngIf="currentTrack.playing" (click)="pauseTrack(currentTrack)" color="light" clear ion-button icon-only><ion-icon name="ios-pause-outline"></ion-icon></button>
-            </ion-col>
- 
-            <ion-col width="33">
-                <button (click)="nextTrack()" color="light" clear ion-button icon-only><ion-icon name="ios-skip-forward"></ion-icon></button>
-            </ion-col>
- 
-        </ion-row>
- 
-    </ion-grid>
- 
+ <player></player>
 </ion-footer>
