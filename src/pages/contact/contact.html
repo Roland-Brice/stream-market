@@ -9,12 +9,11 @@
 
 <ion-content>
   <ion-list>
-    <a ion-item detail-push href="#"><ion-icon name="md-person" item-start></ion-icon>Account</a>
-    <a ion-item detail-none href="#"><ion-icon name="musical-note" item-start></ion-icon>Music Settings</a>
-    <a ion-item detail-push href="#"><ion-icon name="ios-card" item-start></ion-icon>Subscription</a>
-    <a ion-item detail-none href="#"><ion-icon name="md-arrow-round-back" item-start></ion-icon>Log Out</a>
-    <a ion-item detail-none href="#"><ion-icon name="ios-trash" item-start></ion-icon>Delete Account</a>
-    <a ion-item detail-push href="#"><ion-icon name="ios-mail" item-start></ion-icon>Contact Us</a>
-
+    <button ion-item detail-push (click)="openSubscriptionPage()"><ion-icon name="md-person" item-start></ion-icon>Account</button>
+    <button ion-item detail-none (click)="openSubscriptionPage()"><ion-icon name="musical-note" item-start></ion-icon>Music Settings</button>
+    <button ion-item detail-push (click)="openSubscriptionPage()"><ion-icon name="ios-card" item-start></ion-icon>Subscription</button>
+    <button ion-item detail-none (click)="openSubscriptionPage()"><ion-icon name="md-arrow-round-back" item-start></ion-icon>Log Out</button>
+    <button ion-item detail-none (click)="openSubscriptionPage()"><ion-icon name="ios-trash" item-start></ion-icon>Delete Account</button>
+    <button ion-item detail-push (click)="openSubscriptionPage()"><ion-icon name="ios-mail" item-start></ion-icon>Contact Us</button>
   </ion-list>
 </ion-content>

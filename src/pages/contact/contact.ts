@@ -1,3 +1,4 @@
+import { SubscriptionPage } from './../subscription/subscription';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -11,4 +12,7 @@ export class ContactPage {
 
   }
 
+  openSubscriptionPage(){
+    this.navCtrl.push(SubscriptionPage);
+  }
 }

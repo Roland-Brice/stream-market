@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "StreaMarket",
+  "short_name": "StreaMarket",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-
 /**
  * Generated class for the CaddyPage page.
  *
@@ -66,8 +65,54 @@ export class CaddyPage {
           text: 'Buy',
           handler: () => {
             console.log('Buy clicked');
-            
             console.log(this.totalCost())
+
+            
+            var paydunya = require('paydunya');
+            var setup = new paydunya.Setup({
+              masterKey: 'H4N6ERTM-Op5E-OZZI-Fklh-HKQtFLvgf1md',
+              privateKey: 'test_private_4x6DiT5ljNg6CPvoTKLgyHLHEwh',
+              publicKey: 'test_public_1MZVDxsLMtNgOH2R9eWDjQrWRaK',
+              token: 'hWuSBo88rgVDJUczIymv',
+              mode: 'test' // Optionnel. Utilisez cette option pour les paiements tests.
+            });
+
+            var store = new paydunya.Store({
+              name: 'stream-market', // Seul le nom est requis
+              tagline: "",
+              phoneNumber: '',
+              postalAddress: '',
+              websiteURL: ' http://localhost:8100/ ',
+              logoURL: ''
+            });
+
+// Le code suivant décrit comment créer une facture de paiement au niveau de nos serveurs,
+// rediriger ensuite le client vers la page de paiement
+// et afficher ensuite son reçu de paiement en cas de succès.
+var invoice = new paydunya.CheckoutInvoice(setup, store);
+
+//invoice.addItem('Chemise Glacée', 1, 5000, 5000);
+this.albums.forEach(album => {
+  invoice.addItem(album.name, 1, album.price);
+});
+
+this.tracks.forEach(track => {
+  invoice.addItem(track.title, 1, track.price);
+});
+
+invoice.totalAmount = this.totalCost();
+
+invoice.create()
+  .then(function (){
+    console.log(invoice.status);
+    console.log(invoice.token); // Token de facture
+    console.log(invoice.responseText);
+    console.log(invoice.url); // URL de redirection de paiement de facture PayDunya
+  })
+  .catch(function (e) {
+    console.log(e);
+  });
+
           }
         }
       ]
